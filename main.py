@@ -1,5 +1,9 @@
 import discord
 import json
+# Commands #
+
+from commands.history import history
+from commands.card_lookup import card_lookup
 
 BOT_ABOUT = """
 ```
@@ -7,6 +11,8 @@ Written By: Reznok#1688 (Discord)
 ---------------------------------
 ShardBot is a Discord bot built for ShardBound.
 Currently in development. For feature requests, ping me on Discord!
+Check ShardBot out on GitHub:
+https://github.com/reznok/ShardBot
 ```
 """
 
@@ -20,10 +26,6 @@ ShardBot by Reznok#1688 (Discord)
 ```
 """
 
-# Commands #
-
-from commands.history import history
-from commands.card_lookup import card_lookup
 
 config = json.loads(open('config.json').read())  # Load Configs
 client = discord.Client()
