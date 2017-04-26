@@ -65,7 +65,7 @@ async def on_message(message):
         await client.send_message(message.channel, BOT_ABOUT)
 
     if message.content.startswith('!help'):
-        print("About | " + str(message.author) + " | " + message.content)
+        print("Help | " + str(message.author) + " | " + message.content)
         await client.send_message(message.channel, BOT_HELP)
 
 client.run(config["discord_token"])
